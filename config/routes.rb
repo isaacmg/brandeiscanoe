@@ -1,5 +1,8 @@
 Brandeisww::Application.routes.draw do
+  resources :members
+
   resources :supports
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -57,5 +60,7 @@ Brandeisww::Application.routes.draw do
   #   end
   get '/home' => 'high_voltage/pages#show', id: 'home'
     root :to => 'high_voltage/pages#show', id: 'home'
+    get '/success' => 'high_voltage/pages#show', id: 'success'
+
 
 end

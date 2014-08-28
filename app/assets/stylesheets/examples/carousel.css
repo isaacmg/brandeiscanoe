@@ -6,7 +6,7 @@
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
-    color: #00ff00;
+    color: #FF00FF;
 
 }
 

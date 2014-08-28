@@ -1,3 +1,13 @@
+<head>
+<style>
+.formsubmitd
+{
+  	margin: 10px;
+	width: 300px;
+}
+</style>
+</head>
+
 <%= form_for(@support) do |f| %>
   <% if @support.errors.any? %>
     <div id="error_explanation">
@@ -10,8 +20,9 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class ="formsubmitd">
+<form>
+  <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
@@ -27,15 +38,18 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :mailbox %><br>
     <%= f.number_field :mailbox %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :signature %><br>
     <%= f.text_field :signature %>
   </div>
   <div class="actions">
+  
     <%= f.submit %>
+  </div>
+  </form>
   </div>
 <% end %>
