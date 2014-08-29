@@ -25,7 +25,7 @@ class SupportsController < ApplicationController
   # POST /supports.json
   def create
     @support = Support.new(support_params)
-
+    @support.signature= (params[:output])
     respond_to do |format|
       if @support.save
         format.html { redirect_to "/success", notice: 'Support was successfully created.' }

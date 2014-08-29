@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require signature-pad/jquery.signaturepad
+//= require signature-pad/flashcanvas
+//= require signature-pad/json2.min
+$(document).on('ready page:load', function () {
+  $('.sigPad').signaturePad();
+});
+
