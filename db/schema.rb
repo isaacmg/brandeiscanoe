@@ -11,18 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140828005027) do
+ActiveRecord::Schema.define(version: 20140916063949) do
 
   create_table "members", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "phone"
+    t.string   "phone"
     t.integer  "year"
     t.integer  "mailbox"
     t.string   "experience"
     t.string   "car"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "jsonoutput"
+    t.string   "json"
+    t.string   "chase"
   end
 
   create_table "supports", force: true do |t|

@@ -26,7 +26,7 @@ class MembersController < ApplicationController
   # POST /members.json
   def create
     @member = Member.new(member_params)
-
+    @member.json = (params[:output])
     respond_to do |format|
       if @member.save
         format.html { redirect_to "/success", message: 'Member was successfully created. Look forward to seeing you on the river!' }
@@ -70,6 +70,6 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:name, :email, :phone, :year, :mailbox, :experience, :car)
+        params.require(:member).permit(:name, :email, :phone, :year, :mailbox, :experience, :car, :json)
     end
 end
