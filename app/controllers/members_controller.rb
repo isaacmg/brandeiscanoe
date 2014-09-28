@@ -29,6 +29,7 @@ class MembersController < ApplicationController
     @member.json = (params[:output])
     respond_to do |format|
       if @member.save
+          MemberList.send_signup_email(@member).deliver
         format.html { redirect_to "/success", message: 'Member was successfully created. Look forward to seeing you on the river!' }
         format.json { render action: 'show', status: :created, location: @member }
       else

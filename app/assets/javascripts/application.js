@@ -20,5 +20,5 @@
 //= require signature-pad/json2.min
 $(document).on('ready page:load', function () {
   $('.sigPad').signaturePad();
+  $('.sigPad').signaturePad({displayOnly:true}).regenerate(sig);
 });
-
